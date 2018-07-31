@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron style_1">
+        <img src="{{ url_for('static', filename = 'OD.jpg') }}" alt = 'Dictionary_Cover' style="width: 100%;">
+        <h2>Enter the search word:</h2>
+        <form action= '' method='POST'>
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ wtf.form_field( form.word ) }} <br>
+                </div>
+                <div class="form-group">
+                    {{ wtf.form_field(form.language) }} <br>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg">Search word</button>
+                </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

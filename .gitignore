@@ -1,0 +1,6 @@
+.env
+notes.txt
+site.db
+venv/
+__pycache__/
+.idea/

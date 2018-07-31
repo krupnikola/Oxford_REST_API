@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+{% if title %}
+        {{ title }} - Oxford_app
+        {% else %}
+        Welcome to Oxford_app!
+        {% endif %}
+{% endblock %}
+
+    <body>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}
+        {% endblock %}
+        {% block scripts %}
+            {{ super() }}
+            <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+            <link href="https://fonts.googleapis.com/css?family=Playfair+Display:500,700,900" rel="stylesheet">
+
+        {% endblock %}
+    </body>

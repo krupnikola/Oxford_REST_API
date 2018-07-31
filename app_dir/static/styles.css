@@ -1,0 +1,29 @@
+body {
+    background-image: url("./123.jpg");
+    background-size:cover;
+    background-position: center;
+}
+
+
+.jumbotron {
+    position: center;
+    max-width: 400px; /* Maximum width */
+    margin: 20px auto; /* Center it */
+    font-family: 'Playfair Display', serif;
+}
+
+td {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    padding: 1px;
+
+}
+
+.results {
+    margin-left: 20px;
+    color: white;
+}
+
+.btn {
+    margin-top: 10px;
+}
